@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ХКБМ імені Морозова</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="homeBody">
+
+<div class="navbar">
+    <a href="index.html" class="iconButton">
+        <img src="home.png" alt="Головна">
+    </a>
+
+    <div class="navCenter">
+        <a href="about.html">Про бюро</a>
+        <a href="history.html">Історія</a>
+        <a href="tech.html">Техніка</a>
+        <a href="facts.html">Факти</a>
+        <a href="project.html">Про проєкт</a>
+    </div>
+
+    <div class="logoRight">
+        <img src="hkbm.png" alt="ХКБМ">
+    </div>
+</div>
+
+<main class="homePage">
+    <section class="homeHero">
+        <video autoplay muted loop playsinline class="homeHeroVideo">
+            <source src="video.mp4" type="video/mp4">
+        </video>
+
+        <div class="homeHeroOverlay"></div>
+
+        <div class="homeHeroContent" id="homeHeroContent">
+            <button class="homeHeroToggle" id="homeHeroToggle" type="button" aria-expanded="true" aria-label="Сховати інформаційний блок">↙</button>
+            <div class="homeHeroPanelInner" id="homeHeroPanelInner">
+                <p class="pageEyebrow">Оборонне машинобудування</p>
+                <h1 class="homeHeroTitle">
+                    <span>ХКБМ ІМЕНІ</span>
+                    <span>О. О. МОРОЗОВА</span>
+                </h1>
+                <p class="homeLead">
+                    Харківська школа бронетехніки, яка формувала покоління бойових машин: від історичних проривів до сучасних
+                    платформ, модернізацій та важких інженерних рішень.
+                </p>
+
+                <div class="homeActions">
+                    <a href="tech.html" class="primaryAction">Переглянути техніку</a>
+                    <a href="history.html" class="ghostAction">Хронологія розробок</a>
+                </div>
+
+                <div class="homeMetrics">
+                    <article>
+                        <strong>69</strong>
+                        <span>сторінок техніки в каталозі</span>
+                    </article>
+                    <article>
+                        <strong>XX</strong>
+                        <span>століття досвіду та розвитку</span>
+                    </article>
+                    <article>
+                        <strong>3D</strong>
+                        <span>готова структура для моделей</span>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="homeStrip">
+        <div class="homeStripCard">
+            <span>Фокус</span>
+            <p>Основні бойові танки, БТР, важкі БМП, інженерні машини, бойові модулі та експериментальні проєкти.</p>
+        </div>
+        <div class="homeStripCard">
+            <span>Архітектура сайту</span>
+            <p>Єдиний каталог, шаблонні сторінки техніки, підтримка 3D-моделей та агресивна візуальна система.</p>
+        </div>
+        <div class="homeStripCard">
+            <span>Вектор</span>
+            <p>Показувати не лише історію, а й характер бюро: масу, технологічність, силу та інженерну дисципліну.</p>
+        </div>
+    </section>
+</main>
+<script src="home-panel.js"></script>
+</body>
+</html>
+
+
+
+

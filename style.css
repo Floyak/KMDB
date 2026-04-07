@@ -1,0 +1,3502 @@
+﻿body{
+
+margin:0;
+font-family:Arial;
+
+background:linear-gradient(
+180deg,
+#000000 0%,
+#0a0a0a 40%,
+#111111 100%
+);
+
+color:white;
+
+}
+
+
+/* панель */
+
+.navbar{
+
+position:fixed;
+top:0;
+width:100%;
+height:60px;
+
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:0 20px;
+
+z-index:10;
+
+}
+
+
+/* иконки */
+
+.iconButton img{
+
+height:30px;
+transition:0.3s;
+
+}
+
+.logoRight{
+
+margin-right:25px;
+display:flex;
+align-items:center;
+
+}
+
+.logoRight img{
+
+height:28px;
+transition:0.3s;
+
+}
+
+/* центр кнопок */
+
+.navCenter{
+
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+
+}
+
+.navCenter a{
+
+margin:0 20px;
+text-decoration:none;
+color:white;
+font-size:18px;
+
+transition:0.3s;
+
+}
+
+.navCenter a:hover{
+
+color:#ffd500;
+
+}
+
+
+/* видео */
+
+.hero{
+
+height:100vh;
+overflow:hidden;
+position:relative;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+}
+
+video{
+
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+
+z-index:-1;
+
+}
+
+
+/* текст */
+
+.heroText{
+
+text-align:center;
+max-width:800px;
+
+}
+
+.heroText h1{
+
+font-size:60px;
+margin-bottom:20px;
+
+}
+
+.heroText p{
+
+font-size:20px;
+
+}
+
+.aboutSection{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+gap:60px;
+
+padding:140px 80px;
+
+}
+
+.aboutText{
+
+max-width:600px;
+
+}
+
+.aboutText h1{
+
+font-size:48px;
+margin-bottom:30px;
+
+}
+
+.aboutText p{
+
+font-size:18px;
+line-height:1.6;
+margin-bottom:20px;
+
+}
+
+.aboutImage img{
+width:360px;
+border-radius:10px;
+}
+
+.timeline{
+
+max-width:1000px;
+margin:auto;
+padding:140px 20px;
+
+position:relative;
+
+}
+
+.timeline::before{
+
+content:"";
+position:absolute;
+
+left:120px;
+top:0;
+bottom:0;
+
+
+}
+
+.timelineTitle{
+
+font-size:48px;
+text-align:center;
+margin-bottom:80px;
+
+}
+
+.timelineItem{
+
+display:flex;
+gap:40px;
+margin-bottom:60px;
+
+opacity:0;
+transform:translateY(40px);
+transition:0.8s;
+
+}
+
+.timelineItem.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+.year{
+
+font-size:32px;
+color:white;
+
+min-width:120px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-weight:bold;
+
+}
+
+.event{
+
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-radius:10px;
+
+font-size:18px;
+line-height:1.6;
+
+}
+
+/* боковые картинки */
+
+.sideFrame{
+
+position:fixed;
+top:0;
+
+height:100vh;
+width:220px;
+
+z-index:-2;
+overflow:hidden;
+
+}
+
+.sideFrame img{
+
+height:100%;
+width:100%;
+object-fit:cover;
+opacity:0.25;
+
+}
+
+/* левая */
+
+.leftFrame{
+
+left:0;
+
+}
+
+/* правая */
+
+.rightFrame{
+
+right:0;
+
+}
+
+/* чтобы контент не залезал на картинки */
+
+.timeline{
+
+max-width:1000px;
+margin:auto;
+padding:140px 240px;
+
+}
+
+.techPage{
+
+padding-top:120px;
+max-width:1400px;
+margin:auto;
+
+}
+
+#searchInput{
+
+width:100%;
+padding:14px;
+
+margin-bottom:60px;
+
+background:#111;
+border:1px solid #333;
+
+color:white;
+font-size:18px;
+
+}
+
+.techGrid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+
+margin-bottom:80px;
+
+}
+
+.techCard{
+
+background:#0f0f0f;
+
+border-radius:8px;
+overflow:hidden;
+
+text-decoration:none;
+color:white;
+
+position:relative;
+
+transition:0.3s;
+
+}
+
+.techCard img{
+
+width:100%;
+height:200px;
+object-fit:cover;
+
+}
+
+.techCard:hover{
+
+transform:scale(1.03);
+
+}
+
+.techInfo{
+
+position:absolute;
+
+bottom:0;
+left:0;
+right:0;
+
+background:rgba(0,0,0,0.8);
+
+padding:15px;
+
+opacity:0;
+transition:0.3s;
+
+}
+
+.techCard:hover .techInfo{
+
+opacity:1;
+
+}
+
+.techInfo h3{
+
+margin:0;
+margin-bottom:5px;
+
+}
+
+.techInfo p{
+
+font-size:14px;
+
+}
+
+.techGrid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+
+margin-bottom:80px;
+
+}
+
+.languageSelector{
+position:absolute;
+right:80px;
+top:50%;
+transform:translateY(-50%);
+}
+
+.langButton
+{
+background: none;
+border: none;
+font-size: 20px;
+cursor: pointer;
+}
+
+.langMenu
+{
+display: none;
+position: absolute;
+top: 35px;
+right: 0;
+background: #111;
+border: 1px solid #333;
+border-radius: 6px;
+}
+
+.langMenu a
+{
+display: block;
+padding: 8px 12px;
+color: white;
+text-decoration: none;
+font-size: 14px;
+}
+
+.langMenu a:hover
+{
+background: #333;
+}
+
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: Arial;
+}
+
+.tankPage {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.tankLayout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.leftBlock {
+    width: 40%;
+}
+
+.rightBlock {
+    width: 55%;
+    height: 500px;
+}
+
+model-viewer {
+    width: 100%;
+    height: 100%;
+    background: #222;
+    border-radius: 10px;
+}
+
+/* Кнопка */
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* ПЛАВНОЕ ОТКРЫТИЕ */
+.tankDetails {
+    margin-top: 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.oplotBody {
+    min-height: 100vh;
+    margin: 0;
+    color: #f3ead8;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(150, 124, 76, 0.2), transparent 30%),
+        radial-gradient(circle at 85% 20%, rgba(106, 122, 86, 0.18), transparent 26%),
+        linear-gradient(135deg, #050505 0%, #11100d 52%, #1a1711 100%);
+}
+
+.oplotPage {
+    width: min(1280px, calc(100% - 64px));
+    margin: 0 auto;
+    padding: 48px 0 64px;
+}
+
+.oplotHero {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.95fr) minmax(380px, 1.2fr);
+    gap: 40px;
+    align-items: stretch;
+}
+
+.oplotInfo,
+.oplotViewerFrame,
+.oplotDetailsPanel {
+    border: 1px solid rgba(214, 182, 119, 0.18);
+    background: rgba(8, 8, 8, 0.72);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+}
+
+.oplotInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 38px;
+    border-radius: 28px;
+}
+
+.oplotEyebrow {
+    margin: 0 0 14px;
+    font-size: 0.85rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: #c4a970;
+}
+
+.oplotTitle {
+    margin: 0;
+    min-height: 80px;
+    font-size: clamp(2.7rem, 5vw, 4.8rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+}
+
+.oplotLead {
+    margin: 22px 0 30px;
+    max-width: 540px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(243, 234, 216, 0.78);
+}
+
+.oplotStats {
+    display: grid;
+    gap: 26px;
+}
+
+.oplotStat {
+    display: grid;
+    grid-template-columns: minmax(120px, 160px) 1fr;
+    gap: 18px;
+    align-items: center;
+    padding: 16px 18px;
+    border-radius: 18px;
+    background: linear-gradient(90deg, rgba(96, 90, 66, 0.18), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(208, 180, 118, 0.12);
+}
+
+.oplotStatLabel {
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #c8ae7c;
+}
+
+.oplotStatValue {
+    min-height: 1.4em;
+    font-size: 1.28rem;
+    font-weight: 700;
+    color: #fff7e8;
+}
+
+.oplotToggle {
+    align-self: flex-start;
+    margin-top: 28px;
+    padding: 14px 28px;
+    border: 1px solid rgba(220, 191, 130, 0.28);
+    border-radius: 999px;
+    background: linear-gradient(135deg, #8d7343, #b5965f);
+    color: #0d0c0a;
+    font-size: 0.98rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.oplotToggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(181, 150, 95, 0.28);
+    filter: brightness(1.05);
+}
+
+.oplotViewerShell {
+    position: relative;
+}
+
+.oplotViewerShell::before {
+    content: "";
+    position: absolute;
+    inset: 8% 10% auto auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(205, 170, 104, 0.22), transparent 68%);
+    pointer-events: none;
+}
+
+.oplotViewerFrame {
+    height: 100%;
+    min-height: 620px;
+    padding: 18px;
+    border-radius: 32px;
+}
+
+.oplotViewerFrame model-viewer {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    --poster-color: transparent;
+    background:
+        radial-gradient(circle at center, rgba(255, 248, 231, 0.95) 0%, rgba(241, 234, 218, 0.92) 48%, rgba(213, 203, 185, 0.9) 100%);
+}
+
+.oplotDetailsPanel {
+    display: grid;
+    grid-template-rows: 0fr;
+    margin-top: 26px;
+    border-radius: 28px;
+    transition: grid-template-rows 0.55s ease, opacity 0.45s ease, transform 0.45s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.oplotDetailsPanel.is-open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.oplotDetailsInner {
+    overflow: hidden;
+    padding: 0 34px;
+}
+
+.oplotDetailsPanel.is-open .oplotDetailsInner {
+    padding: 30px 34px 34px;
+}
+
+.oplotDetailsInner p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(243, 234, 216, 0.84);
+}
+
+.oplotDetailsInner p + p {
+    margin-top: 16px;
+}
+
+@media (max-width: 980px) {
+    .oplotPage {
+        width: min(100% - 32px, 1280px);
+        padding-top: 24px;
+    }
+
+    .oplotHero {
+        grid-template-columns: 1fr;
+    }
+
+    .oplotInfo {
+        order: 2;
+        padding: 28px;
+    }
+
+    .oplotViewerFrame {
+        order: 1;
+        min-height: 420px;
+    }
+}
+
+@media (max-width: 640px) {
+    .oplotPage {
+        width: calc(100% - 20px);
+    }
+
+    .oplotInfo,
+    .oplotViewerFrame,
+    .oplotDetailsPanel {
+        border-radius: 22px;
+    }
+
+    .oplotInfo {
+        padding: 22px;
+    }
+
+    .oplotTitle {
+        min-height: 64px;
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
+    }
+
+    .oplotStat {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .oplotStatValue {
+        font-size: 1.12rem;
+    }
+
+    .oplotViewerFrame {
+        min-height: 320px;
+        padding: 12px;
+    }
+
+    .oplotDetailsInner {
+        padding: 0 20px;
+    }
+
+    .oplotDetailsPanel.is-open .oplotDetailsInner {
+        padding: 22px 20px 24px;
+    }
+}
+
+.catalogBody,
+.vehicleBody {
+    min-height: 100vh;
+    margin: 0;
+    color: #f3ead8;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(150, 124, 76, 0.2), transparent 30%),
+        radial-gradient(circle at 85% 20%, rgba(106, 122, 86, 0.18), transparent 26%),
+        linear-gradient(135deg, #050505 0%, #11100d 52%, #1a1711 100%);
+}
+
+.catalogPage,
+.vehicleBody #vehicleRoot {
+    width: min(1280px, calc(100% - 64px));
+    margin: 0 auto;
+    padding: 120px 0 64px;
+}
+
+.catalogHero,
+.catalogToolbar,
+.catalogSection,
+.vehicleInfo,
+.vehicleViewerFrame,
+.vehicleDetailsPanel,
+.vehicleFallback {
+    border: 1px solid rgba(214, 182, 119, 0.18);
+    background: rgba(8, 8, 8, 0.72);
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+}
+
+.catalogHero {
+    padding: 38px;
+    border-radius: 30px;
+}
+
+.catalogEyebrow,
+.vehicleEyebrow {
+    margin: 0 0 14px;
+    font-size: 0.85rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: #c4a970;
+}
+
+.catalogTitle,
+.vehicleTitle {
+    margin: 0;
+    font-size: clamp(2.6rem, 5vw, 4.8rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+}
+
+.catalogLead,
+.vehicleLead {
+    margin: 20px 0 0;
+    max-width: 760px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(243, 234, 216, 0.78);
+}
+
+.catalogToolbar {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 24px;
+    padding: 24px 28px;
+    border-radius: 24px;
+}
+
+.catalogSearchField {
+    flex: 1;
+    display: grid;
+    gap: 16px;
+}
+
+.catalogSearchField span {
+    font-size: 0.82rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #c8ae7c;
+}
+
+.catalogSearchField input {
+    width: 100%;
+    padding: 16px 18px;
+    border: 1px solid rgba(220, 191, 130, 0.18);
+    border-radius: 16px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.03);
+    color: #fff7e8;
+    font-size: 1rem;
+}
+
+.catalogSearchField input:focus {
+    border-color: rgba(220, 191, 130, 0.45);
+    box-shadow: 0 0 0 4px rgba(181, 150, 95, 0.12);
+}
+
+.catalogMeta {
+    margin: 0;
+    white-space: nowrap;
+    color: rgba(243, 234, 216, 0.7);
+}
+
+.catalogSections {
+    display: grid;
+    gap: 28px;
+    margin-top: 28px;
+}
+
+.catalogSection {
+    padding: 26px;
+    border-radius: 28px;
+}
+
+.catalogSectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 26px;
+    margin-bottom: 20px;
+}
+
+.catalogSectionHeader h2 {
+    margin: 0;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.catalogSectionHeader span {
+    color: #c8ae7c;
+}
+
+.catalogGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.catalogCard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+    border-radius: 22px;
+    border: 1px solid rgba(208, 180, 118, 0.12);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(96, 90, 66, 0.12));
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.catalogCard:hover {
+    transform: translateY(-6px);
+    border-color: rgba(220, 191, 130, 0.36);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
+}
+
+.catalogCardImageWrap {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.catalogCardImageWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.catalogCardBody {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 18px;
+}
+
+.catalogCardBody h3 {
+    margin: 4px 0 10px;
+    font-size: 1.25rem;
+}
+
+.catalogCardBody p {
+    margin: 0;
+    line-height: 1.65;
+    color: rgba(243, 234, 216, 0.75);
+}
+
+.catalogCardMeta {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #c8ae7c;
+}
+
+.catalogCardAction {
+    margin-top: auto;
+    padding-top: 18px;
+    font-size: 0.82rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #f7d596;
+}
+
+.catalogEmpty,
+.vehicleFallback {
+    padding: 32px;
+    border-radius: 26px;
+    text-align: center;
+}
+
+.catalogEmpty h2,
+.vehicleFallback h1 {
+    margin: 0 0 12px;
+}
+
+.catalogEmpty p,
+.vehicleFallback p,
+.vehicleFallback a {
+    color: rgba(243, 234, 216, 0.75);
+}
+
+.vehicleBackLink {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 18px;
+    color: #f7d596;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.vehicleHero {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.95fr) minmax(380px, 1.2fr);
+    gap: 40px;
+    align-items: stretch;
+}
+
+.vehicleInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 38px;
+    border-radius: 28px;
+}
+
+.vehicleTitle {
+    min-height: 80px;
+}
+
+.vehicleStats {
+    display: grid;
+    gap: 26px;
+}
+
+.vehicleStat {
+    display: grid;
+    grid-template-columns: minmax(120px, 160px) 1fr;
+    gap: 18px;
+    align-items: center;
+    padding: 16px 18px;
+    border-radius: 18px;
+    background: linear-gradient(90deg, rgba(96, 90, 66, 0.18), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(208, 180, 118, 0.12);
+}
+
+.vehicleStatLabel {
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #c8ae7c;
+}
+
+.vehicleStatValue {
+    min-height: 1.4em;
+    font-size: 1.28rem;
+    font-weight: 700;
+    color: #fff7e8;
+}
+
+.vehicleToggle {
+    align-self: flex-start;
+    margin-top: 28px;
+    padding: 14px 28px;
+    border: 1px solid rgba(220, 191, 130, 0.28);
+    border-radius: 999px;
+    background: linear-gradient(135deg, #8d7343, #b5965f);
+    color: #0d0c0a;
+    font-size: 0.98rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.vehicleToggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(181, 150, 95, 0.28);
+    filter: brightness(1.05);
+}
+
+.vehicleViewerShell {
+    position: relative;
+}
+
+.vehicleViewerShell::before {
+    content: "";
+    position: absolute;
+    inset: 8% 10% auto auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(205, 170, 104, 0.22), transparent 68%);
+    pointer-events: none;
+}
+
+.vehicleViewerFrame {
+    position: relative;
+    min-height: 620px;
+    padding: 18px;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.vehicleViewerFrame model-viewer {
+    width: 100%;
+    height: 100%;
+    min-height: 584px;
+    border-radius: 24px;
+    --poster-color: transparent;
+    background:
+        radial-gradient(circle at center, rgba(255, 248, 231, 0.95) 0%, rgba(241, 234, 218, 0.92) 48%, rgba(213, 203, 185, 0.9) 100%);
+}
+
+.vehicleModelStatus {
+    position: absolute;
+    right: 34px;
+    bottom: 34px;
+    max-width: 280px;
+    padding: 10px 14px;
+    border-radius: 14px;
+    background: rgba(10, 10, 10, 0.72);
+    color: #fff7e8;
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+.missing-model .vehicleModelStatus {
+    color: #ffd0b3;
+}
+
+.vehicleDetailsPanel {
+    display: grid;
+    grid-template-rows: 0fr;
+    margin-top: 26px;
+    border-radius: 28px;
+    transition: grid-template-rows 0.55s ease, opacity 0.45s ease, transform 0.45s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.vehicleDetailsPanel.is-open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.vehicleDetailsInner {
+    overflow: hidden;
+    padding: 0 34px;
+}
+
+.vehicleDetailsPanel.is-open .vehicleDetailsInner {
+    padding: 30px 34px 34px;
+}
+
+.vehicleDetailsInner p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(243, 234, 216, 0.84);
+}
+
+.vehicleDetailsInner p + p {
+    margin-top: 16px;
+}
+
+@media (max-width: 1180px) {
+    .catalogGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 980px) {
+    .catalogPage,
+    .vehicleBody #vehicleRoot {
+        width: min(100% - 32px, 1280px);
+        padding-top: 92px;
+    }
+
+    .catalogToolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .catalogMeta {
+        white-space: normal;
+    }
+
+    .catalogGrid,
+    .vehicleHero {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicleInfo {
+        order: 2;
+        padding: 28px;
+    }
+
+    .vehicleViewerFrame {
+        order: 1;
+        min-height: 420px;
+    }
+
+    .vehicleViewerFrame model-viewer {
+        min-height: 384px;
+    }
+}
+
+@media (max-width: 640px) {
+    .catalogPage,
+    .vehicleBody #vehicleRoot {
+        width: calc(100% - 20px);
+        padding-top: 82px;
+    }
+
+    .catalogHero,
+    .catalogToolbar,
+    .catalogSection,
+    .vehicleInfo,
+    .vehicleViewerFrame,
+    .vehicleDetailsPanel,
+    .vehicleFallback {
+        border-radius: 22px;
+    }
+
+    .catalogHero,
+    .catalogToolbar,
+    .catalogSection,
+    .vehicleInfo {
+        padding: 22px;
+    }
+
+    .catalogTitle,
+    .vehicleTitle {
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
+    }
+
+    .catalogGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicleStat {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .vehicleStatValue {
+        font-size: 1.12rem;
+    }
+
+    .vehicleViewerFrame {
+        min-height: 320px;
+        padding: 12px;
+    }
+
+    .vehicleViewerFrame model-viewer {
+        min-height: 296px;
+    }
+
+    .vehicleModelStatus {
+        right: 22px;
+        bottom: 22px;
+        max-width: calc(100% - 44px);
+    }
+
+    .vehicleDetailsInner {
+        padding: 0 20px;
+    }
+
+    .vehicleDetailsPanel.is-open .vehicleDetailsInner {
+        padding: 22px 20px 24px;
+    }
+}
+
+:root {
+    --bg-0: #050505;
+    --bg-1: #0e0b08;
+    --bg-2: #15110d;
+    --panel: rgba(12, 10, 8, 0.84);
+    --panel-strong: rgba(18, 13, 9, 0.96);
+    --line: rgba(255, 113, 31, 0.24);
+    --line-soft: rgba(255, 197, 122, 0.12);
+    --text-main: #f4ead7;
+    --text-soft: rgba(244, 234, 215, 0.76);
+    --accent: #ff6a00;
+    --accent-2: #ffb300;
+    --danger: #ff3c00;
+    --shadow-deep: 0 22px 70px rgba(0, 0, 0, 0.45);
+}
+
+.homeBody,
+.innerBody,
+.catalogBody,
+.vehicleBody {
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text-main);
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at 20% 0%, rgba(255, 60, 0, 0.15), transparent 24%),
+        radial-gradient(circle at 80% 10%, rgba(255, 179, 0, 0.12), transparent 22%),
+        linear-gradient(135deg, var(--bg-0) 0%, var(--bg-1) 48%, var(--bg-2) 100%);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 74px;
+    background: linear-gradient(90deg, rgba(18, 13, 9, 0.98), rgba(34, 20, 10, 0.92));
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    z-index: 100;
+}
+
+.iconButton img {
+    height: 34px;
+}
+
+.logoRight {
+    margin-right: 0;
+}
+
+.logoRight img {
+    height: 32px;
+}
+
+.navCenter a {
+    margin: 0 16px;
+    color: var(--text-main);
+    font-size: 15px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.navCenter a:hover {
+    color: var(--accent-2);
+}
+
+.homePage,
+.contentPage,
+.catalogPage,
+.vehiclePageShell {
+    width: min(1280px, calc(100% - 64px));
+    margin: 0 auto;
+    padding: 120px 0 64px;
+}
+
+.homePage {
+    padding-top: 98px;
+}
+
+.homeHero,
+.pageHero,
+.homeStripCard,
+.infoPanel,
+.textPanelWide,
+.textPanelAccent,
+.historyBadge,
+.factPanel,
+.catalogHero,
+.catalogToolbar,
+.catalogSection,
+.vehicleInfo,
+.vehicleViewerFrame,
+.vehicleDetailsPanel,
+.vehicleFallback {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    box-shadow: var(--shadow-deep);
+    backdrop-filter: blur(12px);
+}
+
+.homeHero {
+    position: relative;
+    min-height: 72vh;
+    border-radius: 36px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 48px;
+}
+
+.homeHeroVideo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.55) contrast(1.15) brightness(0.35);
+}
+
+.homeHeroOverlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(6, 6, 6, 0.1), rgba(6, 6, 6, 0.82)),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.46) 48%, rgba(255, 106, 0, 0.08) 100%);
+}
+
+.homeHeroContent {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    padding: 30px 34px;
+    background: rgba(8, 10, 8, 0.42);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.pageEyebrow,
+.catalogEyebrow,
+.vehicleEyebrow {
+    margin: 0 0 14px;
+    color: var(--accent-2);
+    font-size: 0.84rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+}
+
+.homeHeroContent h1,
+.pageHero h1,
+.catalogTitle,
+.vehicleTitle {
+    margin: 0;
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
+
+.homeLead,
+.pageLead,
+.catalogLead,
+.vehicleLead {
+    margin: 24px 0 0;
+    max-width: 720px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-soft);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.42);
+}
+
+.pageEyebrow {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.homeActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.primaryAction,
+.ghostAction,
+.inlineAction {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+}
+
+.primaryAction {
+    background: linear-gradient(135deg, var(--danger), var(--accent));
+    color: #120c09;
+    box-shadow: 0 14px 30px rgba(255, 92, 0, 0.28);
+}
+
+.ghostAction,
+.inlineAction {
+    border: 1px solid var(--line);
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.primaryAction:hover,
+.ghostAction:hover,
+.inlineAction:hover,
+.vehicleToggle:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.06);
+}
+
+.homeMetrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    margin-top: 34px;
+}
+
+.homeMetrics article {
+    padding: 18px;
+    border: 1px solid var(--line-soft);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.homeMetrics strong {
+    display: block;
+    font-size: 2rem;
+    color: var(--accent-2);
+}
+
+.homeMetrics span {
+    display: block;
+    margin-top: 8px;
+    color: var(--text-soft);
+    line-height: 1.5;
+}
+
+.homeStrip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.homeStripCard,
+.infoPanel,
+.textPanelWide,
+.textPanelAccent,
+.factPanel {
+    padding: 26px;
+    border-radius: 24px;
+}
+
+.homeStripCard span {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.homeStripCard p,
+.infoPanel p,
+.textPanelWide p,
+.textPanelAccent p,
+.factPanel p {
+    margin: 0;
+    color: var(--text-soft);
+    line-height: 1.75;
+}
+
+.homeStripCard {
+    padding: 18px 26px !important;
+}
+
+.homeStripCard span {
+    margin-bottom: 10px;
+}
+
+.homeStripCard p {
+    line-height: 1.55;
+}
+
+.pageHero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+    gap: 26px;
+    align-items: stretch;
+    padding: 34px;
+    border-radius: 30px;
+}
+
+.pageHeroCompact {
+    grid-template-columns: 1fr;
+}
+
+.pageVisualFrame {
+    min-height: 320px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--line-soft);
+}
+
+.pageVisualFrame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.88) contrast(1.06);
+}
+
+.historyBadge {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 28px;
+    border-radius: 24px;
+}
+
+.historyBadge span {
+    font-size: 3.4rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.historyBadge p {
+    margin: 12px 0 0;
+    line-height: 1.6;
+    color: var(--text-soft);
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.infoPanel h2,
+.textPanelWide h2,
+.textPanelAccent h2,
+.factPanel h2 {
+    margin: 0 0 14px;
+    font-size: 1.35rem;
+    text-transform: uppercase;
+}
+
+.textPanels {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.textPanelAccent {
+    background: linear-gradient(180deg, rgba(255, 75, 32, 0.1), rgba(12, 10, 8, 0.92));
+}
+
+.inlineAction {
+    margin-top: 18px;
+}
+
+.timelineMilitary {
+    max-width: none;
+    margin-top: 28px;
+    padding: 36px;
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    background: var(--panel);
+    box-shadow: var(--shadow-deep);
+}
+
+.timelineMilitary::before {
+    width: 2px;
+    left: 126px;
+    background: linear-gradient(180deg, rgba(255, 106, 0, 0), rgba(255, 106, 0, 0.75), rgba(255, 179, 0, 0));
+}
+
+.timelineMilitary .timelineTitle {
+    text-align: left;
+    margin: 0 0 54px;
+    text-transform: uppercase;
+}
+
+.timelineMilitary .timelineItem {
+    gap: 28px;
+    margin-bottom: 28px;
+    padding: 22px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 106, 0, 0.12);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.timelineMilitary .year {
+    font-size: 28px;
+    color: var(--accent-2);
+}
+
+.timelineMilitary .event {
+    background: rgba(0, 0, 0, 0.22);
+    padding: 20px 22px;
+    border-radius: 18px;
+    color: var(--text-soft);
+}
+
+.catalogCard,
+.factPanel {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 98, 0, 0.08));
+}
+
+.catalogCardBody p,
+.catalogEmpty p,
+.vehicleFallback p,
+.vehicleFallback a,
+.vehicleDetailsInner p,
+.vehicleModelStatus,
+.catalogMeta {
+    color: var(--text-soft);
+}
+
+.catalogCardMeta,
+.catalogSectionHeader span,
+.vehicleStatLabel {
+    color: var(--accent-2);
+}
+
+.catalogCardAction,
+.vehicleBackLink {
+    color: var(--accent);
+}
+
+.vehiclePageShell {
+    width: min(1280px, calc(100% - 64px));
+    margin: 0 auto;
+    padding: 120px 0 64px;
+}
+
+.vehicleToggle {
+    border: 1px solid rgba(255, 124, 45, 0.35);
+    background: linear-gradient(135deg, var(--danger), var(--accent));
+    color: #100a08;
+    box-shadow: 0 12px 28px rgba(255, 92, 0, 0.2);
+}
+
+.vehicleModelStatus {
+    background: rgba(10, 10, 10, 0.78);
+}
+
+.factsGridNew {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+}
+
+@media (max-width: 1180px) {
+    .factsGridNew {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 980px) {
+    .homePage,
+    .contentPage,
+    .catalogPage,
+    .vehiclePageShell {
+        width: min(100% - 32px, 1280px);
+        padding-top: 92px;
+    }
+
+    .pageHero,
+    .textPanels,
+    .infoGrid,
+    .homeStrip,
+    .homeMetrics,
+    .factsGridNew {
+        grid-template-columns: 1fr;
+    }
+
+    .homeHero {
+        min-height: auto;
+        padding: 32px 24px;
+    }
+
+    .timelineMilitary {
+        padding: 24px;
+    }
+
+    .timelineMilitary::before {
+        left: 50px;
+    }
+
+    .timelineMilitary .year {
+        min-width: 78px;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 14px 16px;
+    }
+
+    .navCenter {
+        position: static;
+        left: auto;
+        transform: none;
+        order: 3;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 12px;
+    }
+
+    .navCenter a {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .homePage,
+    .contentPage,
+    .catalogPage,
+    .vehiclePageShell {
+        width: calc(100% - 20px);
+        padding-top: 92px;
+    }
+
+    .homeHeroContent h1,
+    .pageHero h1,
+    .catalogTitle,
+    .vehicleTitle {
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
+    }
+
+    .timelineMilitary .timelineItem {
+        padding: 16px;
+    }
+
+    .timelineMilitary .event {
+        padding: 16px;
+        font-size: 16px;
+    }
+}
+
+/* Final aggressive visual system */
+:root {
+    --bg-0: #020202;
+    --bg-1: #090909;
+    --bg-2: #120404;
+    --panel: rgba(8, 8, 8, 0.94);
+    --panel-strong: rgba(4, 4, 4, 0.98);
+    --line: rgba(255, 0, 0, 0.42);
+    --line-soft: rgba(255, 255, 255, 0.12);
+    --text-main: #f5f5f5;
+    --text-soft: rgba(245, 245, 245, 0.76);
+    --accent: #ff1010;
+    --accent-2: #ffffff;
+    --danger: #ff1010;
+    --shadow-deep: 0 26px 80px rgba(0, 0, 0, 0.6);
+}
+
+.homeBody,
+.innerBody,
+.catalogBody,
+.vehicleBody,
+.oplotBody {
+    background:
+        radial-gradient(circle at 20% 0%, rgba(255, 0, 0, 0.18), transparent 24%),
+        radial-gradient(circle at 85% 10%, rgba(255, 0, 0, 0.08), transparent 18%),
+        linear-gradient(135deg, #000000 0%, #080808 52%, #140202 100%);
+    color: var(--text-main);
+}
+
+.navbar,
+.homeHero,
+.pageHero,
+.homeStripCard,
+.infoPanel,
+.textPanelWide,
+.textPanelAccent,
+.historyBadge,
+.factPanel,
+.catalogHero,
+.catalogToolbar,
+.catalogSection,
+.vehicleInfo,
+.vehicleViewerFrame,
+.vehicleDetailsPanel,
+.vehicleFallback,
+.timelineMilitary {
+    border-radius: 0;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.98), rgba(18, 4, 4, 0.92));
+    border: 1px solid rgba(255, 0, 0, 0.28);
+    box-shadow: var(--shadow-deep);
+}
+
+.navbar {
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.99), rgba(28, 0, 0, 0.95));
+    border-bottom: 1px solid rgba(255, 0, 0, 0.4);
+}
+
+.navCenter a,
+.catalogCardAction,
+.vehicleBackLink,
+.pageEyebrow,
+.catalogEyebrow,
+.vehicleEyebrow,
+.homeStripCard span,
+.catalogCardMeta,
+.catalogSectionHeader span,
+.vehicleStatLabel,
+.historyBadge span,
+.timelineMilitary .year {
+    color: #ffffff;
+}
+
+.navCenter a {
+    position: relative;
+}
+
+.navCenter a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.22s ease;
+}
+
+.navCenter a:hover::after {
+    transform: scaleX(1);
+}
+
+.navCenter a:hover,
+.catalogCardAction,
+.vehicleBackLink:hover {
+    color: var(--accent);
+}
+
+.homeHero,
+.pageHero,
+.catalogHero {
+    overflow: hidden;
+    position: relative;
+}
+
+.homeHero::before,
+.pageHero::before,
+.catalogHero::before,
+.vehicleInfo::before,
+.vehicleViewerFrame::before,
+.vehicleDetailsPanel::before,
+.catalogSection::before,
+.factPanel::before,
+.infoPanel::before,
+.textPanelWide::before,
+.textPanelAccent::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 0.12), transparent 18%, transparent 82%, rgba(255, 0, 0, 0.1)),
+        linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.03) 50%, transparent 100%);
+    pointer-events: none;
+}
+
+.homeHeroContent h1,
+.pageHero h1,
+.catalogTitle,
+.vehicleTitle,
+.timelineMilitary .timelineTitle {
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 24px rgba(255, 0, 0, 0.24);
+}
+
+.homeLead,
+.pageLead,
+.catalogLead,
+.vehicleLead,
+.homeStripCard p,
+.infoPanel p,
+.textPanelWide p,
+.textPanelAccent p,
+.factPanel p,
+.vehicleDetailsInner p,
+.timelineMilitary .event,
+.catalogCardBody p {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.primaryAction,
+.ghostAction,
+.inlineAction,
+.vehicleToggle,
+.oplotToggle {
+    border-radius: 0;
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    box-shadow: none;
+}
+
+.primaryAction,
+.vehicleToggle,
+.oplotToggle {
+    background: linear-gradient(135deg, #7a0000, #ff1010);
+    color: #ffffff;
+}
+
+.ghostAction,
+.inlineAction {
+    background: rgba(255, 0, 0, 0.06);
+    color: #ffffff;
+}
+
+.homeMetrics article,
+.catalogCard,
+.vehicleStat,
+.oplotStat,
+.vehicleModelStatus {
+    border-radius: 0;
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0.06), rgba(0, 0, 0, 0.92));
+    border: 1px solid rgba(255, 0, 0, 0.22);
+}
+
+.catalogCard:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 0, 0, 0.56);
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.42);
+}
+
+.pageVisualFrame,
+.catalogCardImageWrap,
+.vehicleViewerFrame model-viewer,
+.oplotViewerFrame model-viewer {
+    border-radius: 0;
+}
+
+.vehicleViewerFrame model-viewer,
+.oplotViewerFrame model-viewer {
+    background:
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.94) 0%, rgba(232, 232, 232, 0.94) 42%, rgba(182, 182, 182, 0.92) 100%);
+}
+
+.vehiclePosterFallback {
+    position: absolute;
+    inset: 18px;
+    width: calc(100% - 36px);
+    height: calc(100% - 36px);
+    object-fit: cover;
+    display: block;
+    z-index: 2;
+    background: #1a1a1a;
+}
+
+.vehiclePosterFallback[hidden] {
+    display: none;
+}
+
+.missing-model .vehicleViewerFrame model-viewer {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.timelineMilitary {
+    position: relative;
+    overflow: hidden;
+}
+
+.timelineMilitary::before {
+    left: 94px;
+    top: 132px;
+    bottom: 34px;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0.9), rgba(255, 0, 0, 0));
+}
+
+.timelineMilitary .timelineItem {
+    position: relative;
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 22px;
+    align-items: start;
+    border-radius: 0;
+    border: 1px solid rgba(255, 0, 0, 0.16);
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0.04), rgba(0, 0, 0, 0.88));
+}
+
+.timelineMilitary .year {
+    position: relative;
+    z-index: 2;
+    min-width: 110px;
+    padding-right: 12px;
+    background: linear-gradient(90deg, rgba(8, 8, 8, 0.98) 0%, rgba(8, 8, 8, 0.98) 76%, rgba(8, 8, 8, 0) 100%);
+}
+
+.timelineMilitary .event {
+    border-radius: 0;
+    border-left: 3px solid rgba(255, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.timelineMilitary .timelineItem::before {
+    content: "";
+    position: absolute;
+    left: 87px;
+    top: 28px;
+    width: 14px;
+    height: 14px;
+    background: #ff1010;
+    box-shadow: 0 0 18px rgba(255, 0, 0, 0.42);
+}
+
+.factsGridNew,
+.infoGrid,
+.homeStrip {
+    gap: 18px;
+}
+
+@media (max-width: 980px) {
+    .timelineMilitary::before {
+        left: 44px;
+        top: 118px;
+    }
+
+    .timelineMilitary .timelineItem {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .timelineMilitary .year {
+        min-width: 0;
+        padding-right: 0;
+        background: none;
+    }
+
+    .timelineMilitary .timelineItem::before {
+        left: 37px;
+        top: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .homePage,
+    .contentPage,
+    .catalogPage,
+    .vehiclePageShell {
+        width: calc(100% - 16px);
+    }
+
+    .homeHero,
+    .pageHero,
+    .catalogHero,
+    .catalogToolbar,
+    .catalogSection,
+    .vehicleInfo,
+    .vehicleViewerFrame,
+    .vehicleDetailsPanel,
+    .factPanel,
+    .infoPanel,
+    .textPanelWide,
+    .textPanelAccent,
+    .timelineMilitary {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+
+/* Palette refinement */
+:root {
+    --panel: rgba(7, 7, 7, 0.96);
+    --panel-strong: rgba(3, 3, 3, 0.99);
+    --line: rgba(255, 32, 32, 0.24);
+    --line-soft: rgba(255, 255, 255, 0.08);
+    --text-main: #f2f2f2;
+    --text-soft: rgba(242, 242, 242, 0.74);
+    --accent: #d81919;
+    --accent-2: #ffffff;
+    --danger: #ff1f1f;
+}
+
+.homeBody,
+.innerBody,
+.catalogBody,
+.vehicleBody,
+.oplotBody {
+    background:
+        radial-gradient(circle at 18% 0%, rgba(216, 25, 25, 0.11), transparent 20%),
+        radial-gradient(circle at 84% 12%, rgba(216, 25, 25, 0.05), transparent 16%),
+        linear-gradient(135deg, #000000 0%, #070707 56%, #110303 100%);
+}
+
+.navbar,
+.homeHero,
+.pageHero,
+.homeStripCard,
+.infoPanel,
+.textPanelWide,
+.textPanelAccent,
+.historyBadge,
+.factPanel,
+.catalogHero,
+.catalogToolbar,
+.catalogSection,
+.vehicleInfo,
+.vehicleViewerFrame,
+.vehicleDetailsPanel,
+.vehicleFallback,
+.timelineMilitary {
+    background:
+        linear-gradient(180deg, rgba(10, 10, 10, 0.98), rgba(10, 10, 10, 0.94));
+    border-color: rgba(255, 32, 32, 0.18);
+}
+
+.navbar {
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.995), rgba(14, 14, 14, 0.97));
+    border-bottom-color: rgba(255, 32, 32, 0.24);
+}
+
+.homeHero::before,
+.pageHero::before,
+.catalogHero::before,
+.vehicleInfo::before,
+.vehicleViewerFrame::before,
+.vehicleDetailsPanel::before,
+.catalogSection::before,
+.factPanel::before,
+.infoPanel::before,
+.textPanelWide::before,
+.textPanelAccent::before {
+    background:
+        linear-gradient(135deg, rgba(216, 25, 25, 0.05), transparent 18%, transparent 82%, rgba(216, 25, 25, 0.04)),
+        linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.02) 50%, transparent 100%);
+}
+
+.homeHeroContent h1,
+.pageHero h1,
+.catalogTitle,
+.vehicleTitle,
+.timelineMilitary .timelineTitle {
+    text-shadow: 0 0 18px rgba(216, 25, 25, 0.16);
+}
+
+.navCenter a:hover,
+.catalogCardAction,
+.vehicleBackLink:hover,
+.primaryAction,
+.vehicleToggle,
+.oplotToggle,
+.timelineMilitary .timelineItem::before {
+    color: #ffffff;
+}
+
+.navCenter a::after {
+    background: rgba(216, 25, 25, 0.9);
+}
+
+.primaryAction,
+.vehicleToggle,
+.oplotToggle {
+    background: linear-gradient(135deg, #4f0909, #b31212);
+    border-color: rgba(255, 32, 32, 0.38);
+}
+
+.ghostAction,
+.inlineAction {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.homeMetrics article,
+.catalogCard,
+.vehicleStat,
+.oplotStat,
+.vehicleModelStatus {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(0, 0, 0, 0.94));
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.catalogCard:hover {
+    border-color: rgba(216, 25, 25, 0.36);
+}
+
+.timelineMilitary::before {
+    background: linear-gradient(180deg, rgba(216, 25, 25, 0), rgba(216, 25, 25, 0.7), rgba(216, 25, 25, 0));
+}
+
+.timelineMilitary .timelineItem {
+    border-color: rgba(255, 255, 255, 0.07);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(0, 0, 0, 0.9));
+}
+
+.timelineMilitary .event {
+    border-left-color: rgba(216, 25, 25, 0.5);
+}
+
+.timelineMilitary .timelineItem::before {
+    background: #d81919;
+    box-shadow: 0 0 14px rgba(216, 25, 25, 0.28);
+}
+
+.pageVisualFrame {
+    max-width: 420px;
+    min-height: 240px;
+    justify-self: end;
+    align-self: start;
+}
+
+.pageVisualFrame img {
+    object-fit: contain;
+    background: #050505;
+}
+
+@media (max-width: 980px) {
+    .pageVisualFrame {
+        max-width: 360px;
+        width: 100%;
+        justify-self: start;
+    }
+}
+
+@media (max-width: 640px) {
+    .pageVisualFrame {
+        max-width: 100%;
+        min-height: 220px;
+    }
+}
+
+/* Targeted fixes */
+.timelineMilitary::before {
+    display: none;
+}
+
+.timelineMilitary .timelineItem {
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 18px;
+    padding: 18px 18px 18px 26px;
+}
+
+.timelineMilitary .timelineItem::before {
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+}
+
+.timelineMilitary .year {
+    min-width: 0;
+    padding: 0;
+    background: none;
+    text-align: left;
+}
+
+.timelineMilitary .event {
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.factsGridNew {
+    gap: 14px;
+}
+
+.factPanel {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(0, 0, 0, 0.94));
+    border-color: rgba(255, 255, 255, 0.07);
+}
+
+.factPanel::before {
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent 42%);
+}
+
+.factPanel h2 {
+    color: #ffffff;
+}
+
+.aboutCommand {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.72fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.aboutCommandText,
+.morozovFigure {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.98), rgba(8, 8, 8, 0.94));
+    box-shadow: var(--shadow-deep);
+}
+
+.aboutCommandText {
+    padding: 34px;
+}
+
+.aboutQuotes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 26px;
+}
+
+.aboutQuotePanel {
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.015);
+}
+
+.aboutQuotePanel span {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--accent);
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.aboutQuotePanel p {
+    margin: 0;
+    line-height: 1.65;
+    color: var(--text-soft);
+}
+
+.morozovFigure {
+    margin: 0;
+    padding: 18px;
+    max-width: 380px;
+    justify-self: end;
+}
+
+.morozovPortrait {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #020202;
+}
+
+.morozovPortrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.1) contrast(1.04);
+}
+
+.morozovCaption {
+    display: grid;
+    gap: 6px;
+    margin-top: 14px;
+}
+
+.morozovCaption strong {
+    color: #ffffff;
+    font-size: 1.02rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.morozovCaption span {
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 980px) {
+    .aboutCommand {
+        grid-template-columns: 1fr;
+    }
+
+    .morozovFigure {
+        max-width: 340px;
+        justify-self: start;
+    }
+
+    .aboutQuotes {
+        grid-template-columns: 1fr;
+    }
+
+    .timelineMilitary .timelineItem {
+        grid-template-columns: 1fr;
+        padding-left: 22px;
+    }
+
+    .timelineMilitary .timelineItem::before {
+        left: 10px;
+        top: 24px;
+        transform: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .aboutCommandText,
+    .morozovFigure {
+        padding: 18px;
+    }
+
+    .morozovFigure {
+        max-width: 100%;
+    }
+}
+
+/* Navigation and vehicle layout fixes */
+.logoRight {
+    margin-right: 34px;
+    padding-left: 8px;
+    flex-shrink: 0;
+}
+
+.logoRight img {
+    display: block;
+}
+
+.vehicleBody #vehicleRoot {
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.vehiclePageShell {
+    position: relative;
+    z-index: 1;
+}
+
+.vehicleModelStatus,
+[data-model-status] {
+    display: none !important;
+}
+
+@media (max-width: 640px) {
+    .logoRight {
+        margin-right: 14px;
+        padding-left: 6px;
+    }
+}
+
+/* Strict black and white refinement */
+:root {
+    --panel: rgba(10, 10, 10, 0.92);
+    --panel-strong: rgba(8, 8, 8, 0.96);
+    --line: rgba(255, 255, 255, 0.14);
+    --line-soft: rgba(255, 255, 255, 0.08);
+    --text-main: #f3f3f3;
+    --text-soft: rgba(243, 243, 243, 0.74);
+    --accent: #ffffff;
+    --accent-2: #ffffff;
+    --danger: #ffffff;
+    --shadow-deep: 0 20px 48px rgba(0, 0, 0, 0.42);
+}
+
+.homeBody,
+.innerBody,
+.catalogBody,
+.vehicleBody,
+.oplotBody {
+    background: #020202;
+    color: var(--text-main);
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.56) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: none !important;
+}
+
+.navbar,
+.homeHero,
+.pageHero,
+.homeStripCard,
+.infoPanel,
+.textPanelWide,
+.textPanelAccent,
+.historyBadge,
+.factPanel,
+.catalogHero,
+.catalogToolbar,
+.catalogSection,
+.vehicleInfo,
+.vehicleViewerFrame,
+.vehicleDetailsPanel,
+.vehicleFallback,
+.timelineMilitary,
+.aboutCommandText,
+.morozovFigure {
+    background: rgba(10, 10, 10, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.09) !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.homeHero::before,
+.pageHero::before,
+.catalogHero::before,
+.vehicleInfo::before,
+.vehicleViewerFrame::before,
+.vehicleDetailsPanel::before,
+.catalogSection::before,
+.factPanel::before,
+.infoPanel::before,
+.textPanelWide::before,
+.textPanelAccent::before {
+    display: none !important;
+}
+
+.navCenter a,
+.pageEyebrow,
+.catalogEyebrow,
+.vehicleEyebrow,
+.catalogCardMeta,
+.catalogSectionHeader span,
+.vehicleStatLabel,
+.catalogCardAction,
+.vehicleBackLink,
+.historyBadge span,
+.timelineMilitary .year,
+.morozovCaption strong,
+.morozovCaption span {
+    color: #ffffff !important;
+}
+
+.navCenter a::after {
+    background: rgba(255, 255, 255, 0.9) !important;
+}
+
+.homeHeroContent h1,
+.pageHero h1,
+.catalogTitle,
+.vehicleTitle,
+.timelineMilitary .timelineTitle,
+.infoPanel h2,
+.textPanelWide h2,
+.textPanelAccent h2,
+.factPanel h2,
+.aboutCommandPanel h2 {
+    text-shadow: none !important;
+    color: #ffffff;
+}
+
+.homeLead,
+.pageLead,
+.catalogLead,
+.vehicleLead,
+.homeStripCard p,
+.infoPanel p,
+.textPanelWide p,
+.textPanelAccent p,
+.factPanel p,
+.vehicleDetailsInner p,
+.timelineMilitary .event,
+.catalogCardBody p,
+.aboutCommandPanel p {
+    color: rgba(243, 243, 243, 0.76) !important;
+}
+
+.primaryAction,
+.ghostAction,
+.inlineAction,
+.vehicleToggle,
+.oplotToggle {
+    background: transparent !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    box-shadow: none !important;
+}
+
+.homeMetrics article,
+.catalogCard,
+.vehicleStat,
+.oplotStat,
+.vehicleModelStatus,
+.aboutCommandPanel,
+.aboutQuotePanel {
+    background: rgba(255, 255, 255, 0.015) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 0 !important;
+}
+
+.catalogCard:hover,
+.primaryAction:hover,
+.ghostAction:hover,
+.inlineAction:hover,
+.vehicleToggle:hover,
+.oplotToggle:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.28) !important;
+    filter: none !important;
+}
+
+.timelineMilitary .timelineItem {
+    background: rgba(255, 255, 255, 0.01) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.timelineMilitary .event {
+    background: transparent !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.timelineMilitary .timelineItem::before {
+    background: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.factPanel,
+.homeStripCard,
+.textPanelAccent {
+    background: rgba(10, 10, 10, 0.92) !important;
+}
+
+.aboutCommand {
+    grid-template-columns: minmax(0, 1.6fr) minmax(290px, 0.7fr);
+    gap: 8px;
+    align-items: stretch;
+}
+
+.aboutCommandText {
+    padding: 30px;
+}
+
+.aboutCommandGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.aboutCommandPanel {
+    padding: 18px;
+}
+
+.aboutCommandPanelWide {
+    grid-column: 1 / -1;
+}
+
+.aboutCommandPanel h2 {
+    margin: 0 0 12px;
+    font-size: 0.95rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.morozovFigure {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    max-width: 340px;
+}
+
+.morozovPortrait {
+    aspect-ratio: 3 / 4;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #050505;
+}
+
+.morozovPortrait img {
+    object-fit: cover;
+    filter: grayscale(1) contrast(1.02);
+}
+
+.morozovCaption {
+    margin-top: 12px;
+}
+
+@media (max-width: 980px) {
+    .aboutCommand {
+        grid-template-columns: 1fr;
+    }
+
+    .aboutCommandGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .morozovFigure {
+        max-width: 340px;
+        justify-self: start;
+    }
+}
+
+@media (max-width: 640px) {
+    .aboutCommandText,
+    .morozovFigure {
+        padding: 18px;
+    }
+
+    .morozovFigure {
+        max-width: 100%;
+    }
+}
+
+/* Brand and timeline alignment */
+.brandMark {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #f3f3f3;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.brandMark img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+}
+
+.brandMark span {
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    color: #f3f3f3;
+}
+
+.logoRight {
+    width: 28px;
+    margin-right: 22px;
+    padding-left: 0;
+}
+
+.timelineMilitary .timelineItem::before {
+    display: none;
+}
+
+.timelineMilitary .timelineItem {
+    grid-template-columns: 170px minmax(0, 1fr);
+}
+
+.timelineMilitary .year {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 640px) {
+    .brandMark span {
+        font-size: 0.88rem;
+    }
+
+    .brandMark img,
+    .logoRight {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Header revert and centered years */
+.brandMark {
+    display: none !important;
+}
+
+.logoRight {
+    width: auto;
+    margin-right: 42px;
+    padding-left: 0;
+}
+
+.logoRight img {
+    display: block;
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.timelineMilitary .timelineItem {
+    align-items: center !important;
+}
+
+.timelineMilitary .year {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    align-self: stretch;
+    text-align: center !important;
+    min-height: 100%;
+}
+
+@media (max-width: 980px) {
+    .timelineMilitary .year {
+        justify-content: center !important;
+    }
+}
+
+/* MM-14 inspired theme */
+:root {
+    --panel: rgba(86, 95, 70, 0.9);
+    --panel-strong: rgba(70, 78, 58, 0.95);
+    --line: rgba(205, 196, 158, 0.2);
+    --line-soft: rgba(231, 224, 196, 0.08);
+    --text-main: #f0ead6;
+    --text-soft: rgba(240, 234, 214, 0.74);
+    --accent: #d7cca4;
+    --accent-2: #f5efdc;
+    --danger: #ddd1a2;
+}
+
+.homeBody,
+.innerBody,
+.catalogBody,
+.vehicleBody,
+.oplotBody {
+    background:
+        linear-gradient(0deg, rgba(20, 24, 18, 0.92), rgba(20, 24, 18, 0.92)),
+        linear-gradient(90deg, transparent 0 8%, rgba(182, 171, 126, 0.08) 8% 16%, transparent 16% 24%, rgba(93, 103, 76, 0.08) 24% 32%, transparent 32% 40%, rgba(59, 68, 50, 0.08) 40% 48%, transparent 48% 56%, rgba(205, 194, 153, 0.08) 56% 64%, transparent 64% 72%, rgba(88, 99, 70, 0.08) 72% 80%, transparent 80% 100%),
+        linear-gradient(transparent 0 10%, rgba(70, 79, 58, 0.1) 10% 20%, transparent 20% 30%, rgba(193, 182, 138, 0.08) 30% 40%, transparent 40% 50%, rgba(89, 97, 73, 0.08) 50% 60%, transparent 60% 70%, rgba(59, 68, 50, 0.08) 70% 80%, transparent 80% 100%),
+        linear-gradient(135deg, #2b3025 0%, #3a4130 52%, #4a4f3b 100%);
+    background-size: auto, 160px 160px, 160px 160px, auto;
+    color: var(--text-main);
+}
+
+.navbar {
+    background:
+        linear-gradient(0deg, rgba(58, 65, 49, 0.46), rgba(58, 65, 49, 0.46)),
+        linear-gradient(90deg, rgba(205, 194, 153, 0.06) 0 8%, transparent 8% 16%, rgba(94, 104, 77, 0.07) 16% 24%, transparent 24% 32%, rgba(63, 72, 53, 0.07) 32% 40%, transparent 40% 48%, rgba(179, 169, 130, 0.06) 48% 56%, transparent 56% 64%, rgba(84, 94, 70, 0.07) 64% 72%, transparent 72% 80%, rgba(53, 61, 45, 0.07) 80% 88%, transparent 88% 100%) !important;
+    background-size: auto, 220px 74px !important;
+    border-bottom: 1px solid rgba(224, 214, 176, 0.1) !important;
+}
+
+.navbar,
+.homeHero,
+.pageHero,
+.homeStripCard,
+.infoPanel,
+.textPanelWide,
+.textPanelAccent,
+.historyBadge,
+.factPanel,
+.catalogHero,
+.catalogToolbar,
+.catalogSection,
+.vehicleInfo,
+.vehicleViewerFrame,
+.vehicleDetailsPanel,
+.vehicleFallback,
+.timelineMilitary,
+.aboutCommandText,
+.morozovFigure {
+    background:
+        linear-gradient(0deg, rgba(72, 79, 58, 0.9), rgba(72, 79, 58, 0.9)),
+        linear-gradient(90deg, rgba(193, 182, 138, 0.04) 0 10%, transparent 10% 20%, rgba(95, 105, 77, 0.05) 20% 30%, transparent 30% 40%, rgba(59, 67, 49, 0.05) 40% 50%, transparent 50% 60%, rgba(179, 169, 130, 0.05) 60% 70%, transparent 70% 100%) !important;
+    border-color: rgba(214, 206, 173, 0.12) !important;
+}
+
+.navCenter a,
+.pageEyebrow,
+.catalogEyebrow,
+.vehicleEyebrow,
+.catalogCardMeta,
+.catalogSectionHeader span,
+.vehicleStatLabel,
+.catalogCardAction,
+.vehicleBackLink,
+.historyBadge span,
+.timelineMilitary .year,
+.morozovCaption strong,
+.morozovCaption span {
+    color: #f1ecdb !important;
+}
+
+.navCenter a::after {
+    background: rgba(241, 236, 219, 0.86) !important;
+}
+
+.homeHero,
+.pageHero,
+.catalogHero,
+.vehicleViewerFrame model-viewer,
+.oplotViewerFrame model-viewer {
+    background:
+        linear-gradient(180deg, rgba(76, 84, 62, 0.88), rgba(54, 61, 45, 0.92)) !important;
+}
+
+.primaryAction,
+.ghostAction,
+.inlineAction,
+.vehicleToggle,
+.oplotToggle {
+    background: rgba(224, 214, 176, 0.08) !important;
+    color: #f5efdc !important;
+    border: 1px solid rgba(224, 214, 176, 0.2) !important;
+}
+
+.homeMetrics article,
+.catalogCard,
+.vehicleStat,
+.oplotStat,
+.vehicleModelStatus,
+.aboutCommandPanel,
+.aboutQuotePanel {
+    background: rgba(233, 227, 204, 0.03) !important;
+    border-color: rgba(224, 214, 176, 0.11) !important;
+}
+
+.catalogCard:hover,
+.primaryAction:hover,
+.ghostAction:hover,
+.inlineAction:hover,
+.vehicleToggle:hover,
+.oplotToggle:hover {
+    border-color: rgba(233, 228, 207, 0.24) !important;
+}
+
+.timelineMilitary .timelineItem,
+.timelineMilitary .event,
+.factPanel,
+.textPanelAccent {
+    background: rgba(58, 65, 49, 0.72) !important;
+    border-color: rgba(224, 214, 176, 0.09) !important;
+}
+
+/* Project page */
+.projectHero {
+    align-items: stretch;
+}
+
+.projectAuthorCard,
+.projectSchoolPanel,
+.projectMapPanel {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 28px;
+    box-sizing: border-box;
+}
+
+.projectAuthorCard {
+    width: min(360px, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+}
+
+.projectAuthorCard strong,
+.projectSchoolPanel h2,
+.projectMapPanel h2 {
+    font-size: 30px;
+    line-height: 1.15;
+}
+
+.projectAuthorCard p,
+.projectSchoolPanel p,
+.projectMapPanel p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.projectLabel,
+.projectSectionLabel {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    color: rgba(255,255,255,0.68);
+    margin-bottom: 12px;
+}
+
+.projectSchoolGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+    gap: 22px;
+    margin: 34px 0 32px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    align-items: stretch;
+}
+
+.projectSchoolFacts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.projectSchoolFacts div {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 14px;
+}
+
+.projectSchoolFacts span {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.62);
+    margin-bottom: 8px;
+}
+
+.projectSchoolFacts strong {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.projectMapAddress {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 14px;
+}
+
+.projectMapLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.projectSchoolPanel,
+.projectMapPanel,
+.textPanelWide,
+.textPanelAccent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.projectSchoolPanel p,
+.projectMapPanel p,
+.textPanelWide p,
+.textPanelAccent p {
+    max-width: 100%;
+}
+
+.projectMapLinks,
+.textPanelAccent .inlineAction {
+    margin-top: auto;
+}
+
+.projectMapLinks a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 18px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.05);
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.projectMapLinks a:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.3);
+}
+
+@media (max-width: 980px) {
+    .projectSchoolGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .projectSchoolFacts {
+        grid-template-columns: 1fr;
+    }
+
+    .projectAuthorCard {
+        width: 100%;
+    }
+}
+
+/* Navigation refinement for five items */
+.navCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    max-width: calc(100% - 180px);
+}
+
+.navCenter a {
+    margin: 0;
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+@media (max-width: 980px) {
+    .navbar {
+        padding: 0 14px;
+    }
+
+    .navCenter {
+        gap: 16px;
+        max-width: calc(100% - 120px);
+    }
+
+    .navCenter a {
+        font-size: 14px;
+    }
+}
+
+/* History rebuild */
+.historyPageNew {
+    display: grid;
+    gap: 26px;
+}
+
+.historyHero {
+    min-height: 0;
+}
+
+.historyBadgeWide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.historyMarkers {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.historyMarkerCard,
+.historySectionCard,
+.historyNarrativeBlock,
+.historyFeatureMeta div {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 22px;
+}
+
+.historyMarkerCard strong,
+.historySectionCard h2,
+.historyNarrativeBlock h2,
+.historyFeatureText h2 {
+    display: block;
+    margin: 0 0 14px;
+    font-size: 1.45rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.historyMarkerCard p,
+.historySectionCard p,
+.historyNarrativeBlock p,
+.historyFeatureText p,
+.historyFeatureMeta span,
+.historyFeatureMeta strong {
+    margin: 0;
+    line-height: 1.75;
+}
+
+.historySectionGrid,
+.historyNarrative {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.historySectionLabel {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 0.76rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.68);
+}
+
+.historyFeature {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+    gap: 22px;
+    padding: 28px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.02);
+}
+
+.historyFeatureMeta {
+    display: grid;
+    gap: 14px;
+}
+
+.historyFeatureMeta span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.74rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.64);
+}
+
+.historyFeatureMeta strong {
+    display: block;
+    font-size: 1.15rem;
+}
+
+.historyTextPanels {
+    margin-top: 0;
+}
+
+@media (max-width: 1100px) {
+    .historyMarkers {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .historySectionGrid,
+    .historyNarrative,
+    .historyFeature {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .historyMarkers {
+        grid-template-columns: 1fr;
+    }
+
+    .historyMarkerCard,
+    .historySectionCard,
+    .historyNarrativeBlock,
+    .historyFeature,
+    .historyFeatureMeta div {
+        padding: 18px;
+    }
+}
+
+/* Video darkening removal */
+.homeHeroVideo {
+    filter: none !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    background: #0d120d;
+}
+
+.homeHeroOverlay {
+    display: none !important;
+    background: none !important;
+}
+
+/* Home hero horizontal alignment */
+.homeHero {
+    padding: 0 !important;
+    min-height: auto !important;
+    aspect-ratio: 16 / 9;
+}
+
+.homeHeroContent {
+    max-width: none !important;
+    width: min(100%, 900px);
+    height: 492px;
+    max-height: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    transform-origin: left bottom;
+    will-change: width, height, transform, opacity;
+    overflow: hidden;
+    transition:
+        width 520ms cubic-bezier(0.22, 1, 0.36, 1),
+        height 520ms cubic-bezier(0.22, 1, 0.36, 1),
+        padding 320ms ease,
+        background 260ms ease,
+        border-color 260ms ease,
+        box-shadow 260ms ease,
+        transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 260ms ease;
+}
+
+@media (max-width: 980px) {
+    .homeHero {
+        padding: 24px !important;
+        aspect-ratio: auto;
+    }
+
+    .homeHeroContent {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.homeHeroTitle span {
+    display: block;
+    white-space: nowrap;
+}
+
+.homeHeroPanelInner {
+    padding: 18px 28px 28px;
+    height: 100%;
+    box-sizing: border-box;
+    transform-origin: left bottom;
+    transition:
+        opacity 300ms ease,
+        transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
+        visibility 0s linear 0s;
+}
+
+.homeHeroPanelInner .pageEyebrow {
+    margin-bottom: 8px;
+}
+
+.homeHeroPanelInner .homeLead {
+    margin-top: 14px;
+}
+
+.homeHeroPanelInner .homeActions {
+    margin-top: 14px;
+}
+
+.homeHeroPanelInner .homeMetrics {
+    margin-top: 24px;
+    margin-bottom: 18px;
+}
+
+.homeHeroToggle {
+    position: absolute;
+    top: -16px;
+    right: -4px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    background: rgba(0, 0, 0, 0.24);
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 3;
+    transition:
+        top 340ms cubic-bezier(0.22, 1, 0.36, 1),
+        right 340ms cubic-bezier(0.22, 1, 0.36, 1),
+        left 340ms cubic-bezier(0.22, 1, 0.36, 1),
+        bottom 340ms cubic-bezier(0.22, 1, 0.36, 1),
+        width 220ms ease,
+        height 220ms ease,
+        border-color 180ms ease,
+        background 180ms ease,
+        opacity 180ms ease;
+}
+
+.homeHeroToggle:hover {
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(0, 0, 0, 0.38);
+}
+
+.homeHeroContent.is-collapsed {
+    width: 40px !important;
+    height: 40px !important;
+    min-height: 40px;
+    padding: 0 !important;
+    background: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    transform: scale(0.99);
+}
+
+.homeHeroContent.is-collapsed .homeHeroPanelInner {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-12px, 12px) scale(0.12);
+    transition:
+        opacity 260ms ease,
+        transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
+        visibility 0s linear 260ms;
+}
+
+.homeHeroContent.is-collapsed .homeHeroToggle {
+    top: auto;
+    right: auto;
+    left: -1px;
+    bottom: -1px;
+    width: 40px;
+    height: 40px;
+    border-color: rgba(255, 255, 255, 0.28);
+    background: rgba(8, 10, 8, 0.42);
+}
+
+.homeActions {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    width: 100%;
+}
+
+.homeActions .primaryAction,
+.homeActions .ghostAction {
+    box-sizing: border-box;
+    min-height: 0;
+    padding: 8px 16px !important;
+    width: 100%;
+}
+
+.homeActions .primaryAction {
+    grid-column: 1;
+}
+
+.homeActions .ghostAction {
+    grid-column: 2;
+}
+
+@media (max-width: 980px) {
+    .homeHeroTitle span {
+        white-space: normal;
+    }
+
+    .homeHeroPanelInner {
+        padding: 16px 20px 22px;
+    }
+
+    .homeHeroToggle {
+        top: -12px;
+        right: -4px;
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .homeHeroContent.is-collapsed {
+        width: 34px !important;
+        height: 34px !important;
+        min-height: 34px;
+    }
+
+    .homeHeroContent.is-collapsed .homeHeroToggle {
+        left: -1px;
+        bottom: -1px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .homeActions {
+        grid-template-columns: 1fr !important;
+        width: 100%;
+    }
+
+    .homeActions .primaryAction,
+    .homeActions .ghostAction {
+        width: 100%;
+    }
+}

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ХКБМ | Техніка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="catalogBody">
+
+<div class="navbar">
+    <a href="index.html" class="iconButton">
+        <img src="home.png" alt="Головна">
+    </a>
+
+    <div class="navCenter">
+        <a href="about.html">Про бюро</a>
+        <a href="history.html">Історія</a>
+        <a href="tech.html">Техніка</a>
+        <a href="facts.html">Факти</a>
+        <a href="project.html">Про проєкт</a>
+    </div>
+
+    <div class="logoRight">
+        <img src="hkbm.png" alt="ХКБМ">
+    </div>
+</div>
+
+<main class="catalogPage">
+    <section class="catalogHero">
+        <p class="catalogEyebrow">Єдиний каталог техніки</p>
+        <h1 class="catalogTitle">Платформа для всієї техніки ХКБМ</h1>
+        <p class="catalogLead">
+            Каталог і сторінки техніки тепер працюють від одного джерела даних. Кожна картка веде на окрему сторінку
+            з 3D-моделлю, короткими характеристиками та розгорнутим описом.
+        </p>
+    </section>
+
+    <section class="catalogToolbar">
+        <label class="catalogSearchField" for="searchInput">
+            <span>Пошук</span>
+            <input type="search" id="searchInput" placeholder="Введіть назву техніки або категорію">
+        </label>
+        <p class="catalogMeta" id="catalogMeta">Завантаження каталогу...</p>
+    </section>
+
+    <section class="catalogSections" id="catalogRoot"></section>
+</main>
+
+<script src="tech-data.js"></script>
+<script src="search.js"></script>
+</body>
+</html>
+
+
+
